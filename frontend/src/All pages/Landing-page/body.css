@@ -41,20 +41,23 @@
   line-height: 1.6;
   /* text-align:left; */
   color: #333;
-  padding-left:80px;
+  /* padding-left:80px; */
 }
 .column-h2{
     font-size:20px;
     font-weight:bold;
-    padding-left:80px;
+    /* padding-left:80px; */
 }
  
 
 /* Second Section: Carousel */
 .carousel-section {
-  padding: 50px;
+  padding: 55px;
   background-color: #0d9488;
   text-align: center;
+ 
+  
+  
 }
 
 .carousel-section h2 {
@@ -62,20 +65,21 @@
   margin-bottom: 20px;
 }
 
-.carousel-container {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  height:70vh;
-  background-color: white;
-}
 
-.carousel-slide {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.carousel-quote1 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(58, 55, 57);
+  margin-top: 5px;
+  padding: 5px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  filter: brightness(0) invert(1);
 }
 
 .carousel-slide {
@@ -109,6 +113,13 @@
 }
 
 /* Third Section: Contact Us */
+
+
+.contact-section-h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  font-weight:bold;
+}
 .contact-section {
   padding: 50px;
   background:linear-gradient(to bottom , #f3f1f2, #0d9488 );
@@ -116,13 +127,6 @@
   height:100vh;
   padding:50px 0;
 }
-
-.contact-section-h1 {
-  font-size: 34px;
-  margin-bottom: 10px;
-  font-weight:bold;
-}
-
 .contact-section-p  {
   font-size: 16px;
   margin-bottom: 20px;
@@ -175,7 +179,7 @@
     border-radius:5px;
 }
 .your-message{
-    width: 100%;
+     width: 100%; 
     height: 15vh;
     margin-top:10px;
     border-radius:5px;
@@ -206,16 +210,7 @@
   background-color: #23bab022;
 } */
 
- .button {
-  padding: 10px 20px;
-  background-color: #10b981;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top:5px;
-}
+
 button:hover {
   background-color: #23bab022;
 } 
@@ -232,6 +227,7 @@ button:hover {
     font-size:36px;
     color:#333;
     font-family: "sans-serif";
+    padding:35px;
 }
 .carousel-quote{
     font-size:25px;
@@ -257,10 +253,10 @@ filter:brightness(0) invert(1);
     padding:5px;
 }
 .welcome-gif {
-  width: 80px; 
+  width: 100px; 
   height: 80px;
   vertical-align: middle;
    background-color:white;
-   margin-right:5px;
+    margin-right:5px; 
 
 }

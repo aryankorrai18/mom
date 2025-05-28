@@ -4,9 +4,10 @@ import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
 // import logo from '../../assets/logo.png';
 import image from '../../assets/image.jpg';
+import { Carousel } from 'react-bootstrap';
 import medicine from '../../assets/medicine.png';
 import Contact from './contactus.jsx';
-import welcome from '../../assets/Welcome.gif';
+import welcome from '../../assets/welcome.gif';
 import LandingPageHeader from './header.jsx';
 
 const LandingPageBody = () => {
@@ -48,50 +49,38 @@ const LandingPageBody = () => {
 
         {/* Second Section: Carousel  */}
 <section id="carousel" className="carousel-section">
-       
-       <h1 className="  whatsnew">What's New?</h1>
+            <h1 className="whatsnew">What's New?</h1>
+            <Carousel>
+              <Carousel.Item>
+                <img src={image} className="d-block w-50 mx-auto" alt="MOM Pharmacy Core Team" />
+                <Carousel.Caption>
+                  {/* <p className="carousel-quote1">MOM PHARMACY CORE TEAM</p> */}
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={image} className="d-block w-50 mx-auto" alt="ISB Meeting" />
+                <Carousel.Caption>
+                  {/* <p className="carousel-quote1">
+                    ISB MEETING to visit innovateⁿ 4th Edition — April 25, 2025, Indian School of Business.
+                  </p> */}
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={image} className="d-block w-50 mx-auto" alt="Placeholder" />
+                <Carousel.Caption>
+                  {/* <p className="carousel-quote1">Stay tuned for more updates!</p> */}
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+        </section>
+        
+  <Contact />
 
-<div id="carouselExampleCaptions" class="carousel slide ">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner mt-5">
-    <div class="carousel-item active">
-      <img src={image}  class="d-block w-50 mx-auto " alt="image"/>
-       <div class="carousel-caption d-none d-md-block"></div>
-       <p className="carousel-quote1 ">MOM PHARMACY CORE TEAM</p>
-    
-    </div>
-    <div class="carousel-item">
-      <img src={image} class="d-block w-50 mx-auto " alt="image"/>
-      <div class="carousel-caption d-none d-md-block">
-        </div>
-        <p className="carousel-quote1">ISB MEETING TO visit innovateⁿ 4th Edition — April 25, 2025, Indian School of Business.</p>
-      
-    </div>
-    <div class="carousel-item">
-      <img src={image} class="d-block w-50 mx-auto" alt="image"/>
-      <div class="carousel-caption d-none d-md-block">
-        <p className="carousel-quote1"></p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  
 </div>
-<Contact />
-</section>
-    </div>
+
+
 </div>
+
 </>
   );
 };

@@ -16,9 +16,11 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
+     alert('message sent succesfully')
     e.preventDefault();
     setLoading(true);
+   
 
    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -33,10 +35,11 @@ const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
         toast.error('Failed to send message. Please try again later.');
       })
       .finally(() => setLoading(false));
+      
   };
 
   return (
-    <section id="contact" className="contact-section bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <section id="contact"  className=" d-flex flex-column justify-content-center contact-section bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900">Contact Us</h2>
         <p className="mt-2 text-lg text-gray-600">Have questions? Reach out to us!</p>
@@ -76,11 +79,10 @@ const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
           />
         </div>
 
-        <div className="text-right">
+        <div className="">
           <button
-            type="submit"
             disabled={loading}
-            className="button px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="send_message px-6 py-2 bg-teal-600 text-white rounded-md hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
