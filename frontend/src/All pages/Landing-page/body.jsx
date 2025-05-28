@@ -7,7 +7,7 @@ import image from '../../assets/image.jpg';
 import { Carousel } from 'react-bootstrap';
 import medicine from '../../assets/medicine.png';
 import Contact from './contactus.jsx';
-import welcome from '../../assets/welcome.gif';
+import welcome from '../../assets/Welcome.gif';
 import LandingPageHeader from './header.jsx';
 
 const LandingPageBody = () => {
