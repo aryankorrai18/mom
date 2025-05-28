@@ -1,15 +1,18 @@
 import React from 'react';
 import './SAHeader.css';
 import Logo from '../../../assets/logo.png';
-const SAHeader = () => {
+const SAHeader = ({adminDetails}) => {
   
   return (
     <header className="saheader">
-     <div className="saheader-left">
+   <div className="saheader-left">
         <img src={Logo} alt="Portal Logo" className="saheader-logo" />
         <div className="saadmin1-info">
-          <span className="saadmin1_type">Admin Type:</span>
+          <span className="saadmin1_type">Admin Type: </span>
+          <span>{adminDetails?.role || "N/A"}</span>
+          <br />
           <span className="saadmin1_gender">Gender: </span>
+          <span>{adminDetails?.gender || "N/A"}</span>
         </div>
       </div>
       <nav className="sanav">

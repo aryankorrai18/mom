@@ -1,15 +1,18 @@
 import React from 'react';
 import './SVHeader.css';
 import Logo from '../../../assets/logo.png';
-const SVHeader = () => {
+const SVHeader = ({adminDetails}) => {
   
   return (
     <header className="SVheader">
-     <div className="SVheader-left">
-        <img src={Logo} alt="Portal Logo" className="SVheader-logo" />
-        <div className="SVadmin3-info">
-          <span className="SVadmin3_type">Admin Type:</span>
-          <span className="SVadmin3_gender">Gender: </span>
+  <div className="SVheader-left">
+        <img src={Logo} alt="Portal Logo" className="saheader-logo" />
+        <div className="saadmin1-info">
+          <span className="saadmin1_type">Admin Type: </span>
+          <span>{adminDetails?.role || "N/A"}</span>
+          <br />
+          <span className="saadmin1_gender">Gender: </span>
+          <span>{adminDetails?.gender || "N/A"}</span>
         </div>
       </div>
       <nav className="SVnav">

@@ -201,7 +201,7 @@ exports.loginUser = async (req, res) => {
       return res.status(400).json({ message: `Role mismatch: expected "${user.role}"` });
 
     const payload = { id: user._id, roletype: user.roletype, role: user.role };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign(payload, process.env.JWT_SECRET_old, { expiresIn: '1h' });
 
     let redirectTo;
     if (roletype === 'Employee') {

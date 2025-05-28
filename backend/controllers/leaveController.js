@@ -183,9 +183,19 @@ const updateLeaveStatus = async (req, res) => {
   }
 };
 
+const getPendingLeaveCount = async (req, res) => {
+  console.log("pending leave count called")
+  try {
+    const count = await Leave.countDocuments({ status: 'Pending' });
+    res.status(200).json({ count });
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching leave count', error });
+  }
+};
 module.exports = {
   applyLeave,
   getLeaves,
   getAllLeaveRequests,
-  updateLeaveStatus
+  updateLeaveStatus,
+  getPendingLeaveCount
 };

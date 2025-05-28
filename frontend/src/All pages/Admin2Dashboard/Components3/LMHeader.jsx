@@ -1,17 +1,20 @@
 import React from 'react';
 import './LMHeader.css';
 import Logo from '../../../assets/logo.png';
-const LMHeader = () => {
+const LMHeader = ({adminDetails}) => {
   
   return (
     <header className="LMheader">
-     <div className="LMheader-left">
-        <img src={Logo} alt="Portal Logo" className="LMheader-logo" />
-        <div className="LMadmin1-info">
-          <span className="LMadmin1_type">Admin Type:</span>
-          <span className="LMadmin1_gender">Gender: </span>
+    <div className="LMheader-left">
+          <img src={Logo} alt="Portal Logo" className="saheader-logo" />
+          <div className="saadmin1-info">
+            <span className="saadmin1_type">Admin Type: </span>
+            <span>{adminDetails?.role || "N/A"}</span>
+            <br />
+            <span className="saadmin1_gender">Gender: </span>
+            <span>{adminDetails?.gender || "N/A"}</span>
+          </div>
         </div>
-      </div>
       <nav className="LMnav">
         <ul className="LMnav-list">
           <li className="LMnav-item">

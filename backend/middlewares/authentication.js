@@ -6,19 +6,19 @@ const authenticate = async (req, res, next) => {
   console.log("Auth header:", authHeader);
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return res.status(401).json({ message: 'No token provided' });
+    return res.status(401).json({ message: 'Unauthorized: Token missing' });
   }
 
   const token = authHeader.split(' ')[1];
   console.log("Extracted token:", token);
 
+  if (!token || token === 'null') {
+    return res.status(401).json({ message: 'Unauthorized: Invalid token' });
+  }
+
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("Decoded token:", decoded);
-
-    const user = await User.findById(decoded.id).select('name email role roletype'); // add more fields as needed
-    console.log("User fetched in middleware:", user);
-
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_old);
+    const user = await User.findById(decoded.id).select('name email role roletype');
 
     if (!user) {
       return res.status(401).json({ message: 'User not found' });
@@ -47,23 +47,23 @@ const validateAdmin = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
 
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return res.status(401).json({ message: 'No token provided' });
+    if (!authHeader || !authHeader.startsWith('Bearer ') || authHeader.split(' ')[1] === 'null') {
+      return res.status(401).json({ message: 'No token provided or invalid token' });
     }
 
     const token = authHeader.split(' ')[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_old);
 
-    const admin = await User.findById(decoded._id).lean();
+    const admin = await User.findById(decoded.id).lean();
     if (!admin) {
       return res.status(404).json({ message: 'Admin not found' });
     }
 
-    if (admin.roletype !== 'Admin') {
+    if (admin.roletype?.toLowerCase() !== 'admin') {
       return res.status(403).json({ message: 'Access denied: Admins only' });
     }
 
-    req.user = decoded._id;
+    req.user = admin; // Optionally, attach full admin object
     next();
   } catch (err) {
     console.error('[validateAdmin] Error:', err);
@@ -71,4 +71,8 @@ const validateAdmin = async (req, res, next) => {
   }
 };
 
-module.exports = { authenticate, isAdmin,validateAdmin };
+module.exports = {
+  authenticate,
+  isAdmin,
+  validateAdmin
+};
