@@ -60,7 +60,7 @@ const handleSubmit = async (e) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", registrationData);
+      const response = await axios.post("https://mom-employee-portal-backend.onrender.com/api/auth/register", registrationData);
       alert("Registration successful!");
       navigate("/login");
     } catch (error) {

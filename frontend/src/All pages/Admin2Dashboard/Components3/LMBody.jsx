@@ -87,7 +87,7 @@ const LMBody = () => {
 
     const fetchAdminProfile = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/auth/adminProfile', {
+        const res = await fetch('https://mom-employee-portal-backend.onrender.com/api/auth/adminProfile', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ const LMBody = () => {
 
     const fetchEmployeeCount = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/admin/employee-count', {
+        const res = await fetch('https://mom-employee-portal-backend.onrender.com/api/admin/employee-count', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -131,7 +131,7 @@ const LMBody = () => {
 
     const fetchPendingLeaveCount = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/admin/pending-leave-count', {
+        const res = await fetch('https://mom-employee-portal-backend.onrender.com/api/admin/pending-leave-count', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

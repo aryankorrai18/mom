@@ -23,7 +23,7 @@ const fetchLeaveRequests = async () => {
   }
 
   try {
-    const res = await axios.get('http://localhost:5000/api/leaves/admin/all?status=all', {
+    const res = await axios.get('https://mom-employee-portal-backend.onrender.com/api/leaves/admin/all?status=all', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -43,7 +43,7 @@ const fetchLeaveRequests = async () => {
 
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/leaves/admin/update/${id}`, { status: 'Approved' }, config);
+      await axios.put(`https://mom-employee-portal-backend.onrender.com/api/leaves/admin/update/${id}`, { status: 'Approved' }, config);
       fetchLeaveRequests();
     } catch (error) {
       console.error('Error approving leave:', error.response?.data || error.message);
@@ -52,7 +52,7 @@ const fetchLeaveRequests = async () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/leaves/admin/update/${id}`, { status: 'Rejected' }, config);
+      await axios.put(`https://mom-employee-portal-backend.onrender.com/api/leaves/admin/update/${id}`, { status: 'Rejected' }, config);
       fetchLeaveRequests();
     } catch (error) {
       console.error('Error rejecting leave:', error.response?.data || error.message);

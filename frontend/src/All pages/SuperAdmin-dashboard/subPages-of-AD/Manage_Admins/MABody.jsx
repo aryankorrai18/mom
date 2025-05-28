@@ -381,7 +381,7 @@ const fetchAdmins = async () => {
   try {
     const token = localStorage.getItem("token");
 
-    const response = await axios.get("http://localhost:5000/api/auth/getAllAdmin", {
+    const response = await axios.get("https://mom-employee-portal-backend.onrender.com/api/auth/getAllAdmin", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -399,7 +399,7 @@ const handleDeleteAdmin = async (adminId) => {
   if (!window.confirm("Are you sure you want to delete this admin?")) return;
 
   try {
-    const res = await fetch(`http://localhost:5000/api/admin/deleteAdmin/${adminId}`, {
+    const res = await fetch(`https://mom-employee-portal-backend.onrender.com/api/admin/deleteAdmin/${adminId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`,

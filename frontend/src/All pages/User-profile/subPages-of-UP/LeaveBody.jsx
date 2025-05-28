@@ -23,7 +23,7 @@ const LeaveBody = () => {
   useEffect(() => {
     const fetchLeaveHistory = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/leaves', {
+        const response = await fetch('https://mom-employee-portal-backend.onrender.com/api/leaves', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -63,7 +63,7 @@ const LeaveBody = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/leaves', {
+      const response = await fetch('https://mom-employee-portal-backend.onrender.com/api/leaves', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

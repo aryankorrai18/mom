@@ -10,7 +10,7 @@ export const EmployeeProvider = ({ children }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/auth/profile', {
+    fetch('https://mom-employee-portal-backend.onrender.com/api/auth/profile', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ const Forgot = () => {
     setError('');
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      const res = await axios.post('https://mom-employee-portal-backend.onrender.com/api/auth/forgot-password', { email });
       setMessage(res.data.message || 'Password reset link sent to your email.');
     } catch (err) {
       setError(err.response?.data?.message || 'Something went wrong. Please try again.');

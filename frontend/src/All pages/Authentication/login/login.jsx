@@ -53,7 +53,7 @@ const LoginPage = () => {
       role: formData.role
     };
 
-    const { data } = await axios.post('http://localhost:5000/api/auth/login', payload);
+    const { data } = await axios.post('https://mom-employee-portal-backend.onrender.com/api/auth/login', payload);
 
     localStorage.setItem('token', data.token);
     console.log(data.token)
