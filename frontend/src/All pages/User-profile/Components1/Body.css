@@ -1,0 +1,120 @@
+.UPuser-profile {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.UPsection-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #1a4d4d;
+  padding-bottom: 10px;
+  background-color: #0D9488;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #0D9488;
+  padding-top: 10px;
+}
+
+.UPemployee-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.UPemployee-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Circular image */
+  border: 3px solid #0D9488; /* Teal border to match theme */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensures the image fits well within the circle */
+  transition: transform 0.3s ease;
+}
+
+.UPemployee-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.UPemployee-tagline {
+  font-size: 16px;
+  font-style: italic;
+  color: #1a4d4d;
+  text-align: center;
+  margin: 0;
+}
+
+.UPprofile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.UPdetail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.UPdetail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.UPdetail-label {
+  font-weight: 600;
+  color: #000;
+  flex: 1;
+  text-align: left;
+}
+
+.UPdetail-value {
+  color: #1a4d4d;
+  flex: 1;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .UPuser-profile {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .UPsection-title {
+    font-size: 20px;
+    padding-bottom: 8px;
+  }
+
+  .UPemployee-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .UPemployee-tagline {
+    font-size: 14px;
+  }
+
+  .UPdetail-item {
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .UPdetail-label,
+  .UPdetail-value {
+    text-align: left;
+    flex: none;
+  }
+}

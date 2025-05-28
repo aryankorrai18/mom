@@ -1,0 +1,266 @@
+/* General container styles */
+.body-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* height:100vh;
+  width:100vw; */
+  
+}
+
+/* First Section: Two Columns */
+.two-column-section {
+  width:100vw;
+  flex:display;
+  justify-content: center;
+  gap:200px;
+  
+  background-color:white;
+   height:100vh; 
+ 
+  
+}
+
+.column {
+  width: 45%;
+  padding: 5px;
+  align-content: center;
+}
+
+.column-h1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  /* align-items:left;
+  text-align:left; */
+  font-weight:bold;
+}
+
+.column-p {
+  font-size: 20px;
+  font-style:italic;
+  line-height: 1.6;
+  /* text-align:left; */
+  color: #333;
+  padding-left:80px;
+}
+.column-h2{
+    font-size:20px;
+    font-weight:bold;
+    padding-left:80px;
+}
+ 
+
+/* Second Section: Carousel */
+.carousel-section {
+  padding: 50px;
+  background-color: #0d9488;
+  text-align: center;
+}
+
+.carousel-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  height:70vh;
+  background-color: white;
+}
+
+.carousel-slide {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+  font-size: 30px;
+  margin: 0;
+  border-color:rgb(168, 120, 132);
+  border-width:5px;
+  border-style:line;
+  border-radius:25px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #1a1f25;
+  color: #161515;
+  border-radius: 7px;
+  cursor: pointer;
+  border-color:transparent;
+  border-style:dashed;
+}
+
+.carousel-button.prev {
+  left: 15px;
+}
+
+.carousel-button.next {
+  right: 15px;
+}
+
+/* Third Section: Contact Us */
+.contact-section {
+  padding: 50px;
+  background:linear-gradient(to bottom , #f3f1f2, #0d9488 );
+  text-align: center;
+  height:100vh;
+  padding:50px 0;
+}
+
+.contact-section-h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  font-weight:bold;
+}
+
+.contact-section-p  {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 500px;
+  font-style:italic;
+}
+
+/* .contact-form {
+  margin-top: 20px;
+} */
+
+/* .contact-form input,
+.contact-form textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 420px;
+  
+  border-radius: 5px;
+  font-size: 16px;
+  border-color:#b6b4b4;
+   background-color: #f9fafb;
+  
+  
+} */
+/* 
+.contact-form input {
+  width: 200px;
+} */
+.your-NameandEmail{
+    display: flex;
+    /* margin: 0px 250px 0px 250px; */
+     /* display: block; */
+  margin: 10px auto;
+  /* padding: 10px; */
+  width: 420px;
+  
+  border-radius: 5px;
+  font-size: 16px;
+  border-color:#b6b4b4;
+   /* background-color: #f9fafb; */
+   width: 29%;
+   gap: 30px;
+  
+}
+.your-email {
+    /* margin-left: 30px; */
+    padding: 5px 10px 5px 10px;
+    border-radius:5px;
+}
+.your-message{
+    width: 100%;
+    height: 15vh;
+    margin-top:10px;
+    border-radius:5px;
+}
+.your-name{
+    border-radius:5px;
+     padding: 5px 10px 5px 10px;
+}
+
+/* .contact-form textarea {
+  height: 100px;
+  width:420px;
+  
+  
+} */
+
+/* .contact-form button {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+
+/* .contact-form button:hover {
+  background-color: #23bab022;
+} */
+
+ .button {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top:5px;
+}
+button:hover {
+  background-color: #23bab022;
+} 
+
+.image{
+    height:60vh;
+    width:35vw;
+    border-radius:25px;
+
+}
+
+.whatsnew{
+    font-weight:bold;
+    font-size:36px;
+    color:#333;
+    font-family: "sans-serif";
+}
+.carousel-quote{
+    font-size:25px;
+    font-style:italic;
+    font-weight:700px;
+    color:#333;
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon{
+/* background-color: #1a1f25; */
+width:3rem;
+height:3rem;
+border-radius:5px;
+filter:brightness(0) invert(1);
+
+}
+.carousel-quote1{
+    font-size:35px;
+    text-align:center;
+    font-weight:Bold;
+    color:rgb(58, 55, 57);
+    margin-top:5px;
+    padding:5px;
+}
+.welcome-gif {
+  width: 80px; 
+  height: 80px;
+  vertical-align: middle;
+   background-color:white;
+   margin-right:5px;
+
+}

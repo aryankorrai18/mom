@@ -1,0 +1,119 @@
+.UPheader {
+  background-color: #0D9488; /* Teal background */
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.UPheader1_left {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
+.UPheader-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%; /* Circular logo */
+  border: 2px solid white; /* White border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for logo */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.UPheader-logo:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.UPemployee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.UPemployee-id {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.UPemployee-gender {
+  font-size: 14px;
+  color: #b2d8d8; /* Lighter teal for contrast */
+}
+
+.UPheader-nav {
+  display: flex;
+  gap: 24px; /* Space between navigation links */
+}
+
+.UPnav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.UPnav-link:hover {
+  background-color: #2e6b6b; /* Darker teal on hover */
+  color: #e6fafa; /* Lighter text on hover */
+  padding: 4px 8px;
+  border-radius: 10px;
+  box-shadow:0px 2px #fff;
+}
+
+.UPnav-link.logout {
+  background-color: #e53e3e; /* Red background for logout */
+}
+
+.UPnav-link.logout:hover {
+  background-color: #c53030; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .UPheader {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .UPheader-left {
+    margin-bottom: 12px;
+  }
+
+  .UPheader-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .UPemployee-id {
+    font-size: 16px;
+  }
+
+  .UPemployee-gender {
+    font-size: 12px;
+  }
+
+  .UPheader-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .UPnav-link {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
+
+/* 
+@media screen {
+  
+} */

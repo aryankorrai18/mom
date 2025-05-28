@@ -1,0 +1,117 @@
+.heading {
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+
+/* .mompharmacy {
+  display: block;
+} */
+
+.header {
+  width: 56px;
+  height: 56px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0d9488;
+  max-width: 1640px;
+  padding: 16px;
+}
+
+.container1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav {
+  margin-left: auto;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.quote {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px; /* Increased gap for better spacing */
+}
+
+.login-btn {
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn {
+  background-color: #116861;
+  color: white;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #116861;
+  color: #fff;
+}
+
+.signup-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container1 {
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    margin-left: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-link {
+    margin-bottom: 10px;
+  }
+}

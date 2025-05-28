@@ -1,0 +1,227 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.error-banner {
+  background: #fdecea;
+  color: #b91c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* .login-form label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+} */
+.usernameclass{
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: -0.75rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+.passwordclass{
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: -0.75rem;
+  font-weight: 600;
+  align-self: flex-start;
+
+}
+.roleroletypeclass{
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  text-align: start;
+}
+.role_heading{
+  text-align: start;
+}
+/* .login-form input,
+.login-form select {
+  width: 90%;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+} */
+.usernameplaceholder{
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.password-input {
+  padding-right: 3rem;
+  width: 87%;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.selectroletypeclass{
+  padding-right: 3rem;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.selectroleclass{
+    padding-right: 3rem;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.login-form input:focus,
+.login-form select:focus {
+  border-color: #0D9488;
+  box-shadow: 0 0 6px rgba(13, 148, 136, 0.3);
+  outline: none;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  text-align: start;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.toggle-password img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.dropdown-row {
+  display: flex;
+  gap: 1rem;
+}
+.dropdown {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .login-form button {
+  margin-top: 0.5rem;
+  background: #0D9488;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+} */
+.show-pass{
+  display: flex;
+  justify-content: space-between;
+}
+.show-password{
+  margin-top: 0%;
+  margin-left: 1.7%;
+  /* margin-right: 0%; */
+  /* margin-bottom: 0%; */
+  width: 50px;
+  background-color: #ddd;
+  padding-left: 12px;
+  border-radius: 10px;
+}
+
+.login-form button:hover:not(:disabled) {
+  background-color: #ccc;
+}
+.login-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.login-form p span {
+  color: #0D9488;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .dropdown-row {
+    flex-direction: column;
+  }
+}
+
+/* html, body {
+  height: 100%;
+  overflow: hidden;
+} */

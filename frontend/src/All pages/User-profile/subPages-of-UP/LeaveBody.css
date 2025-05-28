@@ -1,0 +1,201 @@
+.UPleave-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.UPleavebodysection-title{
+   font-size: 24px;
+  font-weight: 600;
+  color: #ffffff; /* Teal color to match header */
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #1a4d4d;
+  padding-bottom: 10px;
+  background-color: #0D9488;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #0D9488;
+  padding-top:10px;
+}
+
+/* Form Styling */
+.UPleave-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.UPform-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.UPform-group label {
+  font-weight: 600;
+  color: #000;
+  flex: 1;
+  text-align: left;
+}
+
+.UPform-group input,
+.UPform-group select,
+.UPform-group textarea {
+  flex: 2;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.UPform-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.UPfromdate{
+  color: red;
+    margin-right: 70px;
+}
+.UPtodate{
+  color: red;
+    margin-right: 95px;
+}
+.UPtype-of-leave{
+   color: red;
+    margin-right: 115px;
+}
+.UPreason-for-leave{
+ color: red;
+    margin-right: 100px;
+}
+.UPsubmit-btn {
+  background-color: #0d9488;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  margin: auto;
+}
+
+.UPsubmit-btn:hover {
+  background-color: #2e6b6b;
+}
+
+/* Status Section */
+.UPstatus-section {
+  margin: 20px 0;
+}
+
+.UPstatus-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a4d4d;
+  margin-bottom: 10px;
+  text-align:start;
+}
+
+.UPstatus-options {
+  display: flex;
+  gap: 20px;
+}
+
+.UPstatus-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Leave History Table */
+.UPleave-history {
+  margin: 20px 0;
+}
+
+.UPleave-history h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a4d4d;
+  margin-bottom: 10px;
+}
+
+.UPleave-history table {
+  width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.10);
+}
+
+.UPleave-history th,
+.UPleave-history td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.UPleave-history th {
+  background-color: #0d9488;
+  color: white;
+  font-weight: 600;
+}
+
+.UPleave-history tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Pagination */
+/* .pagination-note {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+} */
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .UPleave-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .UPsection-title {
+    font-size: 20px;
+  }
+
+  .UPform-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .UPform-group label,
+  .UPform-group input,
+  .UPform-group select,
+  .UPform-group textarea {
+    flex: none;
+    width: 100%;
+  }
+
+  .UPstatus-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .UPleave-history th,
+  .UPleave-history td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

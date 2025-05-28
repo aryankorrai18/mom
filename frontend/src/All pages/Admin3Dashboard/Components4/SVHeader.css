@@ -1,0 +1,79 @@
+/* Styles for SAHeader.jsx */
+.SVheader {
+  background-color: #0D9488;
+  color: #ffffff;
+  padding: 1rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.SVheader-left {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Space between logo and admin info */
+}
+
+
+.SVheader-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%; /* Circular logo */
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease; 
+}
+
+.SVheader-logo:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.SVadmin3-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.SVadmin3_type {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.SVadmin3_gender {
+  font-size: 14px;
+}
+
+.SVnav {
+  display: flex;
+}
+
+.SVnav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+  gap: 34px; /* Space between nav items */
+  font-size: 18px;
+  font-weight: 500;
+    border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.SVnav-item {
+  display: inline-block;
+}
+
+.SVnav-link {
+  color: #ffffff; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.SVnav-link:hover {
+   background-color: #2e6b6b;
+  color: #e6fafa;
+  padding: 4px 8px;
+  border-radius: 10px;
+  box-shadow:0px 2px #fff;
+}
