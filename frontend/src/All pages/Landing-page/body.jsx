@@ -7,7 +7,7 @@ import image from '../../assets/image.jpg';
 import { Carousel } from 'react-bootstrap';
 import medicine from '../../assets/medicine.png';
 import Contact from './contactus.jsx';
-import welcome from '../../assets/welcome.gif';
+// import welcome from '../../assets/welcome.gif';
 import LandingPageHeader from './header.jsx';
 
 const LandingPageBody = () => {
@@ -33,7 +33,7 @@ const LandingPageBody = () => {
       {/* First Section: Two Columns */}
       <section className="two-column-section d-flex flex-row">
         <div className="column  ">
-          <h1 className="column-h1  d-flex align-items-center "><img src={welcome} alt="welcome" className="welcome-gif"/> to Mom Pharmacy Employees  portal</h1>
+          <h1 className="column-h1  d-flex align-items-center ">Welcome to Mom Pharmacy Employees  portal</h1>
           <p className="column-p  mt-4 d-flex flex-start justify-content-start ">
            Here you can manage your portal.
           </p>
