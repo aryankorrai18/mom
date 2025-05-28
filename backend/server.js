@@ -20,7 +20,9 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/authenticationRoutes'));
 app.use('/api/leaves', require('./routes/authenticationRoutes'));
 app.use('/api/admin', require('./routes/authenticationRoutes'));
-
+app.get("/", (req, res) => {
+  res.send("Backend is running ✅");
+});
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
