@@ -26,6 +26,7 @@ const fetchLeaveRequests = async () => {
     const res = await axios.get('https://mom-employee-portal-backend.onrender.com/api/leaves/admin/all?status=all', {
       headers: {
         Authorization: `Bearer ${token}`,
+        withCredentials: true
       },
     });
     setLeaveRequests(res.data);
