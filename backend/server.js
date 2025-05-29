@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 app.use(cors({
-  origin: "https://mom-of0y.onrender.com",
+  origin: "https://mom-eosin.vercel.app/",
   credentials: true
 }));
 
