@@ -93,7 +93,7 @@ const LMBody = () => {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
           },
-          credentials: 'include',
+          credentials: 'include'
         });
 
         if (!res.ok) {
@@ -115,6 +115,7 @@ const LMBody = () => {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
+          credentials: 'include'
         });
 
         if (!res.ok) {
@@ -136,6 +137,8 @@ const LMBody = () => {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
+          
+          credentials: 'include'
         });
 
         if (!res.ok) {

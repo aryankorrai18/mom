@@ -114,6 +114,7 @@ const SABody = () => {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
+          credentials: 'include'
         });
 
         if (!res.ok) {
@@ -135,6 +136,7 @@ const SABody = () => {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
+          credentials: 'include'
         });
 
         if (!res.ok) {

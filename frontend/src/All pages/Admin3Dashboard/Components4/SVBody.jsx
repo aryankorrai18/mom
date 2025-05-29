@@ -28,7 +28,7 @@ const SVBody = () => {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
           },
-          credentials: 'include',
+          credentials: 'include'
         });
 
         if (!res.ok) {
@@ -50,6 +50,7 @@ const SVBody = () => {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
+          credentials: 'include'
         });
 
         if (!res.ok) {
@@ -71,6 +72,7 @@ const SVBody = () => {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
+          credentials: 'include'
         });
 
         if (!res.ok) {

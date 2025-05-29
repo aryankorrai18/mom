@@ -27,6 +27,7 @@ const LeaveBody = () => {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
+          credentials: 'include'
         });
 
         const data = await response.json();
@@ -75,6 +76,7 @@ const LeaveBody = () => {
           type: formData.type,
           reason: formData.reason,
         }),
+        credentials: 'include'
       });
 
       const newLeave = await response.json();

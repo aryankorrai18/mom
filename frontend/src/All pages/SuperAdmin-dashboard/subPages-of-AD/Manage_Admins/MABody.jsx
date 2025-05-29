@@ -384,9 +384,10 @@ const fetchAdmins = async () => {
     const response = await axios.get("https://mom-employee-portal-backend.onrender.com/api/auth/getAllAdmin", {
       headers: {
         Authorization: `Bearer ${token}`,
-        withCredentials: true, // Ensure cookies are sent with the request
-        'Content-Type': 'application/json',
       },
+      
+        withCredentials: true, // Ensure cookies are sent with the request
+        'Content-Type': 'application/json'
     });
 
     setAdmins(response.data.admins);
@@ -406,6 +407,7 @@ const handleDeleteAdmin = async (adminId) => {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
+      creadentials: 'include' // Ensure cookies are sent with the request
     });
 
     const data = await res.json();
